@@ -2,8 +2,8 @@ import './App.css'
 function App() {
   return (
     <div className="container text-center mt-5">
-      <h1 className="text-primary">Bootstrap is Working!</h1>
-      <button className="btn btn-success">Click Me</button>
+      <h1 className="text-primary">Personal Portfolio Website Coming Soon!</h1>
+      
     </div>
   );
 }
