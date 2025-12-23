@@ -1,0 +1,37 @@
+{
+  "portfolio": {
+    "title": "The \"Creative Technologist\" (Best for Design + Code)",
+    "owner": {
+      "name": "Cesar Estevez-Peralta",
+      "summary": "portfolio summary...",
+      "image": "/src/assets/profile-pic.jpeg"
+    }
+  },
+
+  "education": {
+    "institution": "Bellevue University",
+    "area": "Software Development",
+    "studyType": "Bachelor of Science",
+    "startDate": "2020-01-01",
+    "endDate": "2024-06-01",
+    "location": "Bellevue, NE"
+  },
+
+  "profiles": {
+    "networkGitHub": {
+      "network": "GitHub",
+      "url": "https://github.com/CesarJoel04"
+    },
+    "networkLinkedIn": {
+      "network": "LinkedIn",
+      "url": "https://www.linkedin.com/in/cesar-estevez-03b599179/"
+    }
+  },
+
+  "technicalSkills": {
+    "programmingLanguages": ["Java", "JavaScript", "SQL"],
+    "frameworksAndLibraries": ["React", "Node.js", "Express"],
+    "platformsAndTools": ["Git", "GitHub", "npm", "VS Code", "IntelliJ"],
+    "databases": ["MySQL"]
+  }
+}
