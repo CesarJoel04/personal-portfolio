@@ -1,11 +1,10 @@
-import './App.css'
+import styles from "./App.module.css";
+import { Navbar } from "./components/Navbar";
+
 function App() {
-  return (
-    <div className="container text-center mt-5">
-      <h1 className="text-primary">Personal Portfolio Website Coming Soon!</h1>
-      
-    </div>
-  );
+  return <div className={styles.App}>
+    <Navbar />
+  </div>;
 }
 
 export default App;

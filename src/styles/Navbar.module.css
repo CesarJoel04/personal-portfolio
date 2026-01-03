@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: #00d9ff;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menuItems li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menuItems li a:hover {
+  color: #00d9ff;
+}
