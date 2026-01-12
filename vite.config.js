@@ -6,4 +6,5 @@ export default defineConfig({
   plugins: [react()],
   base: "/personal-portfolio/",
   css: { modules: { localsConvention: "camelCase" } },
+  assetsInclude: ['**/*.pdf'],
 });
