@@ -10,7 +10,7 @@ const canvasRef = useRef(null);
   const [pdfDoc, setPdfDoc] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [numPages, setNumPages] = useState(0);
-  const [zoom, setZoom] = useState(1.5);
+  const [zoom] = useState(1.5);
 
   useEffect(() => {
     const loadPdf = async () => {
@@ -52,8 +52,6 @@ const canvasRef = useRef(null);
 
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, numPages));
-  const zoomIn = () => setZoom((prev) => Math.min(prev + 0.25, 3));
-  const zoomOut = () => setZoom((prev) => Math.max(prev - 0.25, 0.5));
 
   return (
     <div className={styles.resume}>
@@ -72,15 +70,6 @@ const canvasRef = useRef(null);
           </span>
           <button onClick={nextPage} disabled={currentPage >= numPages}>
             Next
-          </button>
-          <button onClick={zoomOut} style={{ marginLeft: '20px' }}>
-            Zoom Out
-          </button>
-          <span style={{ margin: '0 10px' }}>
-            {Math.round(zoom * 100)}%
-          </span>
-          <button onClick={zoomIn}>
-            Zoom In
           </button>
         </div>
 

@@ -74,32 +74,32 @@ const [symbol, setSymbol] = useState('');
   const isPositive = priceChange >= 0;
 
   return (
-    <div className="stock-search-container">
-      <div className="stock-search-wrapper">
-        <div className="header">
+    <div className={styles['stock-search-container']}>
+      <div className={styles['stock-search-wrapper']}>
+        <div className={styles.header}>
           <h1>Stock Market Search</h1>
           <p>Live stock data powered by Finnhub</p>
         </div>
 
         {showApiInput && (
-          <div className="api-key-section">
+          <div className={styles['api-key-section']}>
             <label>Finnhub API Key</label>
-            <div className="api-key-input-group">
+            <div className={styles['api-key-input-group']}>
               <input
                 type="password"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 placeholder="Enter your API key"
-                className="api-key-input"
+                className={styles['api-key-input']}
               />
               <button
                 onClick={() => setShowApiInput(false)}
-                className="api-key-save-btn"
+                className={styles['api-key-save-btn']}
               >
                 Save
               </button>
             </div>
-            <p className="api-key-help">
+            <p className={styles['api-key-help']}>
               Get your free API key at{' '}
               <a href="https://finnhub.io" target="_blank" rel="noopener noreferrer">
                 finnhub.io
@@ -111,85 +111,85 @@ const [symbol, setSymbol] = useState('');
         {!showApiInput && (
           <button
             onClick={() => setShowApiInput(true)}
-            className="change-api-key-btn"
+            className={styles['change-api-key-btn']}
           >
             Change API Key
           </button>
         )}
 
-        <div className="search-section">
-          <div className="search-input-group">
+        <div className={styles['search-section']}>
+          <div className={styles['search-input-group']}>
             <input
               type="text"
               value={symbol}
               onChange={(e) => setSymbol(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Enter stock symbol (e.g., AAPL, TSLA, MSFT)"
-              className="symbol-input"
+              className={styles['symbol-input']}
             />
             <button
               onClick={searchStock}
               disabled={loading}
-              className="search-btn"
+              className={styles['search-btn']}
             >
               🔍 {loading ? 'Searching...' : 'Search'}
             </button>
           </div>
 
           {error && (
-            <div className="error-message">
+            <div className={styles['error-message']}>
               {error}
             </div>
           )}
 
           {stockData && (
-            <div className="stock-data">
-              <div className="stock-header">
+            <div className={styles['stock-data']}>
+              <div className={styles['stock-header']}>
                 <h2>{stockData.name}</h2>
                 <p>{stockData.symbol} • {stockData.exchange}</p>
               </div>
 
-              <div className="stock-grid">
-                <div className="stock-card current-price">
-                  <div className="card-label">
+              <div className={styles['stock-grid']}>
+                <div className={`${styles['stock-card']} ${styles['current-price']}`}>
+                  <div className={styles['card-label']}>
                     💵
                     <span>Current Price</span>
                   </div>
-                  <p className="card-value">${stockData.c.toFixed(2)}</p>
+                  <p className={styles['card-value']}>${stockData.c.toFixed(2)}</p>
                 </div>
 
-                <div className={`stock-card ${isPositive ? 'positive' : 'negative'}`}>
-                  <div className="card-label">
+                <div className={`${styles['stock-card']} ${isPositive ? styles.positive : styles.negative}`}>
+                  <div className={styles['card-label']}>
                     {isPositive ? '📈' : '📉'}
                     <span>Change</span>
                   </div>
-                  <p className="card-value">
+                  <p className={styles['card-value']}>
                     {isPositive ? '+' : ''}{priceChange.toFixed(2)} ({percentChange.toFixed(2)}%)
                   </p>
                 </div>
 
-                <div className="stock-card">
-                  <p className="card-label">High</p>
-                  <p className="card-value">${stockData.h.toFixed(2)}</p>
+                <div className={styles['stock-card']}>
+                  <p className={styles['card-label']}>High</p>
+                  <p className={styles['card-value']}>${stockData.h.toFixed(2)}</p>
                 </div>
 
-                <div className="stock-card">
-                  <p className="card-label">Low</p>
-                  <p className="card-value">${stockData.l.toFixed(2)}</p>
+                <div className={styles['stock-card']}>
+                  <p className={styles['card-label']}>Low</p>
+                  <p className={styles['card-value']}>${stockData.l.toFixed(2)}</p>
                 </div>
 
-                <div className="stock-card">
-                  <p className="card-label">Open</p>
-                  <p className="card-value">${stockData.o.toFixed(2)}</p>
+                <div className={styles['stock-card']}>
+                  <p className={styles['card-label']}>Open</p>
+                  <p className={styles['card-value']}>${stockData.o.toFixed(2)}</p>
                 </div>
 
-                <div className="stock-card">
-                  <p className="card-label">Previous Close</p>
-                  <p className="card-value">${stockData.pc.toFixed(2)}</p>
+                <div className={styles['stock-card']}>
+                  <p className={styles['card-label']}>Previous Close</p>
+                  <p className={styles['card-value']}>${stockData.pc.toFixed(2)}</p>
                 </div>
               </div>
 
-              <div className="timestamp">
+              <div className={styles.timestamp}>
                 🕐
                 <span>Last updated: {new Date(stockData.t * 1000).toLocaleString()}</span>
               </div>
@@ -197,7 +197,7 @@ const [symbol, setSymbol] = useState('');
           )}
         </div>
 
-        <div className="footer">
+        <div className={styles.footer}>
           <p>Popular symbols: AAPL, TSLA, MSFT, GOOGL, AMZN, META, NVDA</p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import styles from "../styles/About.module.css";
-import profilePic from "../assets/profile-pic.jpeg";
+import profilePic from "../assets/profile-pic-2.jpeg";
 import portfolioData from "../assets/portfolio.json";
 
 function About() {

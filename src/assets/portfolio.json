@@ -29,9 +29,9 @@
   },
 
   "technicalSkills": {
-    "programmingLanguages": ["Java", "JavaScript", "SQL"],
-    "frameworksAndLibraries": ["React", "Node.js", "Express"],
-    "platformsAndTools": ["Git", "GitHub", "npm", "VS Code", "IntelliJ"],
-    "databases": ["MySQL"]
+    "programmingLanguages": ["Java", "JavaScript"],
+    "frameworksAndLibraries": ["React", "Node.js", "Express", "Spring Boot"],
+    "platformsAndTools": ["Git", "GitHub", "NPM", "VS Code", "IntelliJ"],
+    "databases": ["MySQL", "SQL Server"]
   }
 }
