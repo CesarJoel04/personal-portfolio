@@ -24,7 +24,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Hamburger for mobile */}
+      {/* onClick event listener - toggles the mobile menu open/closed when hamburger icon is clicked */}
       <div
         className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}
         onClick={toggleMenu}
@@ -34,12 +34,12 @@ const Navbar = () => {
         <span></span>
       </div>
 
-      {/* Backdrop overlay */}
+      {/* onClick event listener - closes the mobile menu when clicking outside on the backdrop overlay */}
       {menuOpen && (
         <div className={styles.backdrop} onClick={closeMenu} />
       )}
 
-      {/* Mobile Menu */}
+      {/* onClick event listeners - closes menu and navigates when a mobile menu link is clicked */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
         <NavLink onClick={closeMenu} to="/about">About</NavLink>
         <NavLink onClick={closeMenu} to="/projects">Projects</NavLink>

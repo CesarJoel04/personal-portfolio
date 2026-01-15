@@ -1,16 +1,40 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MCC Code School - Intro To Web Development - Portfolio Project
 
-Currently, two official plugins are available:
+### [Website URL](https://cesarjoel04.github.io/personal-portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### [Figma Wireframe](https://www.figma.com/design/RRCOlnxbuWxUXhEt0S7n0G/Personal-Portfolio?node-id=0-1&t=GBcOjeK0F2ZqIb3z-1)
 
-## React Compiler
+- Personal Portfolio Figma Wireframe for mobile device and standart computer screen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### [GitHub Kanban Board](https://github.com/users/CesarJoel04/projects/3)
 
-## Expanding the ESLint configuration
+- GitHub Projects Kanban board to manage user stories for your project.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Features
+
+- Responsive Design - Optimized for desktop, tablet, and mobile devices
+- Interactive Navigation - Hamburger menu with smooth animations for mobile
+- Dynamic Content - Data loaded from JSON for easy updates
+- External API Integration - Real-time stock market data from Finnhub API
+- PDF Resume Viewer - In-browser resume display with page navigation
+- Contact Form - Fully functional contact form with validation
+- Accessible - Semantic HTML and proper ARIA labels
+
+### Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/CesarJoel04/personal-portfolio.git
+   cd personal-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```

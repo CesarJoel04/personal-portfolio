@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Hero.module.css";
 import profilePic from "../assets/profile-pic.jpeg";
+import portfolioData from "../assets/portfolio.json";
 
 function Hero() {
   const [title, setTitle] = useState("");
+  const profiles = portfolioData.profiles;
   useEffect(() => {
     fetch(new URL("../assets/portfolio.json", import.meta.url))
       .then((resp) => resp.json())
@@ -30,6 +32,28 @@ function Hero() {
           </a>
           <a href="#contact" className={styles.secondaryBtn}>
             Contact Me
+          </a>
+        </div>
+
+        {/* Social links - LinkedIn and GitHub artifacts */}
+        <div className={styles.socialLinks}>
+          <a 
+            href={profiles.networkLinkedIn.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className={styles.socialLink}
+          >
+            LinkedIn
+          </a>
+          <a 
+            href={profiles.networkGitHub.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="GitHub Repository"
+            className={styles.socialLink}
+          >
+            GitHub
           </a>
         </div>
       </div>

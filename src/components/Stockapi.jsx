@@ -9,6 +9,7 @@ const [symbol, setSymbol] = useState('');
   const [apiKey, setApiKey] = useState('');
   const [showApiInput, setShowApiInput] = useState(true);
 
+  // onClick event listener handler - fetches stock data from Finnhub API
   const searchStock = async () => {
     if (!symbol.trim()) {
       setError('Please enter a stock symbol');
@@ -63,6 +64,7 @@ const [symbol, setSymbol] = useState('');
     }
   };
 
+  // onKeyPress event listener handler - triggers search when Enter key is pressed
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       searchStock();

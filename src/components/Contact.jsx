@@ -10,6 +10,7 @@ function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // onChange event listener handler - updates form state when user types in input fields
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -18,6 +19,7 @@ function Contact() {
     }));
   };
 
+  // onClick event listener handler - validates and submits the contact form
   const handleSubmit = () => {
     if (formData.name && formData.email && formData.message) {
       console.log('Form submitted:', formData);
